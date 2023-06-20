@@ -1,7 +1,47 @@
+/* GOOGLE FONT */
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #e67e22;
+}
+
 marquee {
   font-size: 50px;
 }
 
-embed {
-  display: none;
+/* NAVBAR */
+nav {
+  display: flex;
+  background-color: azure;
+  justify-content: space-around;
+  background: rgba(0, 0, 0, 0.1);
+
+  /* horizotal vertical blur */
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  width: 30%;
+  /* background-color: black; */
+  justify-content: space-between;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: "Potta One", cursive;
+  color: black;
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover {
+  color: whitesmoke;
 }
