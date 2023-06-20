@@ -17,7 +17,6 @@ marquee {
 /* NAVBAR */
 nav {
   display: flex;
-  background-color: azure;
   justify-content: space-around;
   background: rgba(0, 0, 0, 0.1);
 
@@ -44,4 +43,38 @@ nav ul li a {
 
 nav ul li a:hover {
   color: whitesmoke;
+}
+
+/* HAMBURGER MENU */
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  border-radius: 3px;
+}
+
+/* RESPONSIVE NAVBAR */
+
+/* medium : for example in tablet device */
+@media screen and (max-width: 940px) {
+  nav ul {
+    width: 50%;
+  }
+}
+
+/* small : for example in mobile device */
+@media screen and (max-width: 576px) {
+  nav ul {
+    display: none;
+  }
 }
