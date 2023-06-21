@@ -48,11 +48,23 @@ nav ul li a:hover {
 /* HAMBURGER MENU */
 
 .hamburger-menu {
-  display: flex;
+  display: none;
   flex-direction: column;
-  height: 20px;
+  height: 25px;
   justify-content: space-between;
   align-self: center;
+  position: relative;
+}
+
+.hamburger-menu input {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  left: -5px;
+  top: -2px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .hamburger-menu span {
@@ -61,20 +73,47 @@ nav ul li a:hover {
   height: 3px;
   background-color: black;
   border-radius: 3px;
+  transition: 0.5s;
+}
+
+/* HAMBURGER MENU ANIMATION */
+.hamburger-menu span:nth-child(2) {
+  /* transform-origin ( sumbu x y (dalam %) ) */
+  transform-origin: 0 0;
+}
+
+.hamburger-menu span:last-child {
+  transform-origin: 0 100%;
+}
+
+.hamburger-menu input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(0px, 0px);
+}
+
+.hamburger-menu input:checked ~ span:nth-child(3) {
+  display: none;
+}
+
+.hamburger-menu input:checked ~ span:last-child {
+  transform: rotate(-45deg) translate(1px, -1px);
 }
 
 /* RESPONSIVE NAVBAR */
 
-/* medium : for example in tablet device */
-@media screen and (max-width: 940px) {
+/* medium : for tablet device */
+@media screen and (max-width: 768px) {
   nav ul {
     width: 50%;
   }
 }
 
-/* small : for example in mobile device */
+/* small : for mobile device */
 @media screen and (max-width: 576px) {
   nav ul {
     display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
   }
 }
