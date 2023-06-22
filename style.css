@@ -1,5 +1,6 @@
 /* GOOGLE FONT */
 @import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap");
 
 * {
   margin: 0;
@@ -8,6 +9,7 @@
 
 body {
   background: #e67e22;
+  font-family: "Kiwi Maru", serif;
 }
 
 marquee {
@@ -18,10 +20,16 @@ marquee {
 nav {
   display: flex;
   justify-content: space-around;
-  background: rgba(0, 0, 0, 0.1);
+  /* background: rgba(0, 0, 0, 0.2); */
+  background-color: #ebebeb;
 
   /* horizotal vertical blur */
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
 }
 
 nav ul {
@@ -42,7 +50,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: whitesmoke;
+  color: #e67e22;
 }
 
 /* HAMBURGER MENU */
@@ -98,32 +106,89 @@ nav ul li a:hover {
   transform: rotate(-45deg) translate(1px, -1px);
 }
 
+/* OUR CHEF */
+.our-chef {
+  /* padding: 10rem 10% 1.4rem; */
+  padding: 0px 10% 50px;
+}
+
+.our-chef .container {
+  display: flex;
+  /* background: rgba(0, 0, 0, 0.5); */
+  background-color: #ebebeb;
+  padding: 5% 5%;
+  border-radius: 25px;
+}
+
+.our-chef .container .chef-description {
+  align-self: center;
+  text-align: justify;
+}
+
+.our-chef .container .chef-description h1 {
+  font-size: 30px;
+}
+
+.our-chef .container .chef-description h3 {
+  padding: 5px 0 10px;
+}
+
+.our-chef .container .chef-photo {
+  flex: 1 1 45rem;
+}
+
+.our-chef .container .chef-photo img {
+  width: 100%;
+  border-radius: 200px;
+  /* box-shadow: 0px 10px 1px rgba(0, 0, 0, 0.2); */
+  animation: floatImage 3s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* SCROLL ANNOUNCEMENT */
+.scroll-announcement {
+  padding: 100px 0 0;
+}
+
 /* RESPONSIVE NAVBAR */
 
 /* medium : for tablet device */
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   nav ul {
     width: 50%;
   }
 }
 
 /* small : for mobile device */
-@media screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) {
   nav ul {
-    /* display: none; */
     position: absolute;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.1);
-    height: 100vh;
+    background-image: url(images/hamburger-menu-bg.png);
+    background-size: contain;
+    background-position-x: -60px;
+    height: 50vh;
     width: 100%;
+    border-radius: 0 0 0 50px;
     justify-content: space-evenly;
-    z-index: -1;
-    transform: translateY(0%);
+    top: 100%;
+    right: -100%;
     transition: 1s;
   }
 
-  nav ul.top-slider {
-    transform: translateY(-100%);
+  nav ul.active {
+    right: 0;
   }
 
   .hamburger-menu {
