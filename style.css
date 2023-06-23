@@ -240,6 +240,58 @@ nav ul li a:hover {
   font-style: italic;
 }
 
+/* CONTACT US */
+.contact-us {
+  padding: 0px 10% 50px;
+}
+
+.contact-us .container {
+  background-color: #ebebeb;
+  padding: 5% 5%;
+  border-radius: 25px;
+}
+
+.contact-us .container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-us .container .row {
+  display: flex;
+  margin-top: 30px;
+}
+
+.contact-us .container .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact-us .row form {
+  flex: 1 1 45rem;
+  text-align: center;
+}
+
+.contact-us .row form .input-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 20px;
+  padding-left: 2rem;
+}
+
+footer {
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  background: #ebebeb;
+}
+
+.footer-social {
+  margin-bottom: 25px;
+  word-spacing: 10px;
+}
+
 /* RESPONSIVE NAVBAR */
 
 /* medium : for tablet device */
@@ -250,6 +302,10 @@ nav ul li a:hover {
 
   .our-chef .container .chef-photo {
     align-self: center;
+  }
+
+  .contact-us .container .row {
+    flex-wrap: wrap;
   }
 }
 
@@ -288,5 +344,9 @@ nav ul li a:hover {
 
   .our-chef .container .chef-photo {
     padding: 0;
+  }
+
+  .contact-us .row form .input-group {
+    width: 80%;
   }
 }

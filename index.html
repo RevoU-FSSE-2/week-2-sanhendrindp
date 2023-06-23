@@ -16,7 +16,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="#menu">Menu</a></li>
-        <li><a href="#rate-us">Rate Us</a></li>
+        <li><a href="#contact-us">Contact Us</a></li>
       </ul>
       <div class="hamburger-menu">
         <input type="checkbox" />
@@ -91,13 +91,74 @@
       </div>
     </section>
 
-    <!-- <embed
-      src="music/03.Onnaji Kimochi. (TV Size).mp3"
-      loop="infinite"
-      autostart="true"
-      hidden
-    /> -->
+    <!-- CONTACT US -->
+    <section id="contact-us" class="contact-us">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <div class="row">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18333.84646697428!2d139.75254129786788!3d35.67708102018378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x605d1b87f02e57e7%3A0x2e01618b22571b89!2sTokyo%2C%20Japan!5e0!3m2!1sen!2sid!4v1687529576608!5m2!1sen!2sid"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="map"
+          ></iframe>
 
+          <form action="">
+            <div class="input-group">
+              <label for="full-name">Name </label>
+              <input type="text" id="full-name" placeholder="Your Full Name" />
+            </div>
+            <div class="input-group">
+              <label for="email">Email </label>
+              <input type="email" id="email" placeholder="Your Email" />
+            </div>
+            <div class="input-group">
+              <label for="phone-number">Phone Number </label>
+              <input
+                type="number"
+                id="phone-number"
+                placeholder="Your Phone Number"
+              />
+            </div>
+            <div class="input-group">
+              <label for="living-place">Where do you live ?</label>
+              <select name="living-place" id="living-place">
+                <option value="japan">Japan</option>
+                <option value="indonesia">indonesia</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="question">Your Question Here</label>
+              <textarea
+                id="question"
+                cols="50"
+                rows="4"
+                placeholder="Type Your Question"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/"
+          ><img src="images/social/facebook.png" height="30px" alt="facebook"
+        /></a>
+        <a href="https://www.instagram.com/"
+          ><img src="images/social/instagram.png" height="30px" alt="instagram"
+        /></a>
+        <a href="https://www.twitter.com/"
+          ><img src="images/social/twitter.png" height="30px" alt="twitter"
+        /></a>
+      </div>
+      <p>&#169;2023 All Right Reserved.</p>
+    </footer>
+
+    <!-- SCRIPT.JS -->
     <script src="script.js"></script>
   </body>
 </html>
