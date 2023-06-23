@@ -13,8 +13,23 @@ body {
   font-family: "Kiwi Maru", serif;
 }
 
-marquee {
+.scroll-announcement marquee {
   font-size: 50px;
+}
+
+.scroll-announcement marquee span {
+  animation: colorChanging 0.5s ease-in infinite;
+  font-weight: 800;
+}
+
+@keyframes colorChanging {
+  from {
+    color: #e67e22;
+  }
+
+  to {
+    color: #ebebeb;
+  }
 }
 
 /* NAVBAR */
@@ -196,7 +211,7 @@ nav ul li a:hover {
   padding: 10px;
   border-radius: 10px;
   text-decoration: none;
-  font-weight: 900;
+  font-weight: 800;
   color: #000;
   transition: 0.5s;
 }
