@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -121,6 +122,7 @@ nav ul li a:hover {
 }
 
 .our-chef .container .chef-description {
+  flex: 1 1 45rem;
   align-self: center;
   text-align: justify;
 }
@@ -134,7 +136,8 @@ nav ul li a:hover {
 }
 
 .our-chef .container .chef-photo {
-  flex: 1 1 45rem;
+  flex: 1 1 30rem;
+  padding-left: 100px;
 }
 
 .our-chef .container .chef-photo img {
@@ -168,6 +171,10 @@ nav ul li a:hover {
   nav ul {
     width: 50%;
   }
+
+  .our-chef .container .chef-photo {
+    align-self: center;
+  }
 }
 
 /* small : for mobile device */
@@ -193,5 +200,13 @@ nav ul li a:hover {
 
   .hamburger-menu {
     display: flex;
+  }
+
+  .our-chef .container {
+    flex-wrap: wrap;
+  }
+
+  .our-chef .container .chef-photo {
+    padding: 0;
   }
 }
