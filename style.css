@@ -9,7 +9,7 @@
 }
 
 body {
-  background: #e67e22;
+  background: #111;
   font-family: "Kiwi Maru", serif;
 }
 
@@ -37,7 +37,7 @@ nav ul {
   display: flex;
   align-items: center;
   list-style: none;
-  width: 30%;
+  width: 20%;
   /* background-color: black; */
   justify-content: space-between;
 }
@@ -107,6 +107,12 @@ nav ul li a:hover {
   transform: rotate(-45deg) translate(1px, -1px);
 }
 
+/* SCROLL ANNOUNCEMENT */
+.scroll-announcement {
+  padding: 100px 0 0;
+  color: #ebebeb;
+}
+
 /* OUR CHEF */
 .our-chef {
   /* padding: 10rem 10% 1.4rem; */
@@ -159,9 +165,64 @@ nav ul li a:hover {
   }
 }
 
-/* SCROLL ANNOUNCEMENT */
-.scroll-announcement {
-  padding: 100px 0 0;
+/* OUR MENU */
+.menu {
+  padding: 0px 10% 50px;
+}
+
+.menu .container {
+  background-color: #ebebeb;
+  padding: 5% 5%;
+  border-radius: 25px;
+}
+
+.menu .container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menu .container p {
+  text-align: center;
+}
+
+.menu .container .btn-menu {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.menu .container .btn-menu a {
+  background-color: #e67e22;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 900;
+  color: #000;
+  transition: 0.5s;
+}
+
+.menu .container .btn-menu a:hover {
+  color: #ebebeb;
+  background-color: #111;
+}
+
+.menu .container .menu-list {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+  column-gap: 50px;
+  row-gap: 50px;
+  padding-top: 20px;
+}
+
+.menu .container .menu-list img {
+  width: 200px;
+  height: 200px;
+}
+
+.menu .container .menu-list figcaption {
+  text-align: center;
+  font-style: italic;
 }
 
 /* RESPONSIVE NAVBAR */
@@ -169,7 +230,7 @@ nav ul li a:hover {
 /* medium : for tablet device */
 @media only screen and (max-width: 768px) {
   nav ul {
-    width: 50%;
+    width: 40%;
   }
 
   .our-chef .container .chef-photo {
@@ -184,7 +245,7 @@ nav ul li a:hover {
     flex-direction: column;
     background-image: url(images/hamburger-menu-bg.png);
     background-size: contain;
-    background-position-x: -60px;
+    background-position-x: -90px;
     height: 50vh;
     width: 100%;
     border-radius: 0 0 0 50px;
@@ -196,6 +257,10 @@ nav ul li a:hover {
 
   nav ul.active {
     right: 0;
+  }
+
+  nav ul li a {
+    color: #ebebeb;
   }
 
   .hamburger-menu {
